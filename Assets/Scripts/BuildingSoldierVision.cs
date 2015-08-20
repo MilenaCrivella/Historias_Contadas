@@ -3,6 +3,7 @@ using System.Collections;
 
 public class BuildingSoldierVision : MonoBehaviour {
 
+    public GameObject BuildingVisionManager;
     bool Left = false;
     bool Right = true;
 
@@ -16,23 +17,23 @@ public class BuildingSoldierVision : MonoBehaviour {
 
     void VisionRotation()
     {
-        if (transform.localRotation.z < -0.7f && Left)
+        if (BuildingVisionManager.transform.localRotation.z < -0.7f && Left)
         {
             Right = true;
             Left = false;
         }
-        if (transform.localRotation.z >= 0.7f && Right)
+        if (BuildingVisionManager.transform.localRotation.z >= 0.7f && Right)
         {
             Right = false;
             Left = true;            
         }
         if (Right)
         {
-            transform.Rotate(0, 0, 1);
+            BuildingVisionManager.transform.Rotate(0, 0, 1);
         }
         if (Left)
         {
-            transform.Rotate(0, 0, -1);
+            BuildingVisionManager.transform.Rotate(0, 0, -1);
         }
     }
 
