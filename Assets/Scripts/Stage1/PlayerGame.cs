@@ -10,33 +10,33 @@ public class PlayerGame : MonoBehaviour {
     bool Air = false;
     bool Run = false;
 
-    void OnCollisionEnter2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "Floor")
-        {
+    void OnCollisionEnter2D(Collision2D coll) 
+	{
+        if (coll.gameObject.tag == "Floor") 
+		{
             Jump = false;
             Idle = true;
             Air = false;
         }
     }
 
-    void OnCollisionExit2D(Collision2D coll)
-    {
-        if (coll.gameObject.tag == "Floor")
-        {
+    void OnCollisionExit2D(Collision2D coll) 
+	{
+        if (coll.gameObject.tag == "Floor") 
+		{
             Air = true;
         }
     }
 
-    void CameraGame()
-    {
-        GameCamera.transform.position = new Vector3(this.transform.position.x + 3, this.transform.position.y + 1, GameCamera.transform.position.z);
+    void CameraGame() 
+	{
+        GameCamera.transform.position = new Vector3(this.transform.position.x + 4, this.transform.position.y + 1, GameCamera.transform.position.z);
     }
 
-    void Animations()
-    {
-        if (Idle)
-        {
+    void Animations() 
+	{
+        if (Idle) 
+		{
             gameObject.GetComponent<Animator>().SetBool("Idle", true);
             gameObject.GetComponent<Animator>().SetBool("Walk", false);
             gameObject.GetComponent<Animator>().SetBool("Jump", false);

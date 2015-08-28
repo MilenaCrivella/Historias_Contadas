@@ -4,14 +4,19 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
     public GameObject GameCamera;
-    public GameObject ZakerPower;
+	public GameObject WayPoint1;
     private GameObject myPower;
     bool Walk = false;
     bool Idle = true;
     bool Jump = false;
     bool Air = false;
-    bool Zaker = false;
-
+	float speed;
+	bool subir = false;
+    
+	void Start(){
+		WayPoint1 = GameObject.FindGameObjectWithTag ("WayP1");
+		speed = 3;
+	}
     void OnCollisionEnter2D(Collision2D coll)
     {
         if (coll.gameObject.tag == "Floor")
@@ -20,7 +25,7 @@ public class Player : MonoBehaviour {
             Idle = true;
             Air = false;
         }
-    }
+	}
 
     void OnCollisionExit2D(Collision2D coll)
     {
@@ -29,6 +34,16 @@ public class Player : MonoBehaviour {
             Air = true;
         }
     }
+	void OnTriggerStay2D(Collider2D coll)
+	{
+		if (coll.gameObject.tag.Equals("WayP0")) 
+		{
+			if(Input.GetKey(KeyCode.UpArrow)) {subir = true;}
+		}
+		if (coll.gameObject.tag.Equals ("WayP1")) {
+			subir = false;
+		}
+	}
 
     void CameraGame()
     {
@@ -42,29 +57,20 @@ public class Player : MonoBehaviour {
             gameObject.GetComponent<Animator>().SetBool("Idle", true);
             gameObject.GetComponent<Animator>().SetBool("Walk", false);
             gameObject.GetComponent<Animator>().SetBool("Jump", false);
-            gameObject.GetComponent<Animator>().SetBool("Zaker", false);
         }
         if (Walk)
         {
             gameObject.GetComponent<Animator>().SetBool("Walk", true);
             gameObject.GetComponent<Animator>().SetBool("Idle", false);
             gameObject.GetComponent<Animator>().SetBool("Jump", false);
-            gameObject.GetComponent<Animator>().SetBool("Zaker", false);
         }
         if (Jump)
         {
             gameObject.GetComponent<Animator>().SetBool("Idle", false);
             gameObject.GetComponent<Animator>().SetBool("Walk", false);
             gameObject.GetComponent<Animator>().SetBool("Jump", true);
-            gameObject.GetComponent<Animator>().SetBool("Zaker", false);
         }
-        if (Zaker)
-        {
-            gameObject.GetComponent<Animator>().SetBool("Idle", false);
-            gameObject.GetComponent<Animator>().SetBool("Walk", false);
-            gameObject.GetComponent<Animator>().SetBool("Jump", false);
-            gameObject.GetComponent<Animator>().SetBool("Zaker", true);
-        }
+        
     }
 
     void Movimentation()
@@ -93,11 +99,7 @@ public class Player : MonoBehaviour {
             Walk = false;
             Idle = true;
         }
-        if (Input.GetKeyDown("z"))
-        {
-            Zaker = true;
-            myPower = (GameObject) Instantiate(ZakerPower, new Vector3(this.transform.position.x + 2.2f, this.transform.position.y + 0.3f, this.transform.position.z),transform.rotation);
-        }
+        
         if (!Air)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -110,16 +112,15 @@ public class Player : MonoBehaviour {
         }
     }
 
-    public void FinishZaker()
-    {
-        print("milleninha");
-        Zaker = false;
-        Destroy(myPower);
-    }
+    
 
 	void Update () 
     {
-        Animations();
+		if(subir)
+		{
+			transform.position = Vector3.MoveTowards(transform.position , WayPoint1.transform.position , Time.deltaTime * speed);
+		}
+		Animations();
         Movimentation();
         CameraGame();
 	}

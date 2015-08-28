@@ -14,6 +14,8 @@ public class ManagerFloorVision : MonoBehaviour {
         if (coll.gameObject.tag == "Player" && !Barrel.barrel)
         {
             SoldierVision.Visualizou = true;
+			
+			Debug.Log("Gameover");
         }
     }
 
@@ -28,7 +30,6 @@ public class ManagerFloorVision : MonoBehaviour {
             GameObject.FindGameObjectWithTag("FloorSoldierVision2").transform.localScale = new Vector3(transform.localScale.x, -30, transform.localScale.z);
 			GameObject.FindGameObjectWithTag("FloorSoldierVision3").transform.localScale = new Vector3(transform.localScale.x, -30, transform.localScale.z);
             GameObject.FindGameObjectWithTag("BuildingSoldierVision1").transform.Rotate(0, 0, 1);
-            GameObject.FindGameObjectWithTag("BuildingSoldierVision2").transform.Rotate(0, 0, 1);
         }
         if (FloorSoldier.Goleft)
         {
@@ -39,7 +40,6 @@ public class ManagerFloorVision : MonoBehaviour {
             GameObject.FindGameObjectWithTag("FloorSoldierVision2").transform.localScale = new Vector3(transform.localScale.x, 30, transform.localScale.z);
 			GameObject.FindGameObjectWithTag("FloorSoldierVision3").transform.localScale = new Vector3(transform.localScale.x, 30, transform.localScale.z);
             GameObject.FindGameObjectWithTag("BuildingSoldierVision1").transform.Rotate(0, 0, -1);
-            GameObject.FindGameObjectWithTag("BuildingSoldierVision2").transform.Rotate(0, 0, -1);
         }
     }
 

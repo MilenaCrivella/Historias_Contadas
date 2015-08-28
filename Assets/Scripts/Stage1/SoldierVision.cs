@@ -10,6 +10,7 @@ public class SoldierVision : MonoBehaviour {
         if (coll.gameObject.tag == "Player" && !Barrel.barrel)
         {
             Visualizou = true;
+			Debug.Log("Gameover");
         }
     }
 
@@ -17,7 +18,7 @@ public class SoldierVision : MonoBehaviour {
     {
         if (Visualizou)
         {
-            Application.LoadLevel("GameOver");
+            //Application.LoadLevel("GameOver");
         }
     }
 }

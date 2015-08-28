@@ -7,11 +7,26 @@ public class Barrel : MonoBehaviour {
 
     void OnTriggerStay2D(Collider2D coll)
     {
-        if (coll.gameObject.tag == "Player")
-        {
-            SoldierVision.Visualizou = false;
-            barrel = true;
-        }
+		if(this.gameObject.name.Equals("Muro"))
+		{
+			if(coll.gameObject.tag == "Player")
+			{
+				if(Input.GetKey(KeyCode.DownArrow))
+				{
+					barrel = true;
+				}
+				else
+					barrel = false;
+			}
+		}
+		else
+		{
+        	if (coll.gameObject.tag == "Player")
+       		{
+           		SoldierVision.Visualizou = false;
+         	    barrel = true;
+        	}
+		}
     }
 
     void OnTriggerExit2D(Collider2D coll)

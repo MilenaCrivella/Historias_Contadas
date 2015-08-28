@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{6B9DC892-17C8-AE6C-ED18-5EB90B802864}</ProjectGuid>
+	<ProjectGuid>{5A12142C-4234-7C5E-E0DD-4F553B0B7E7E}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,10 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Alpha.cs" />
      <Compile Include="Assets\Scripts\BuildingSoldierVision.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\PlayerRun.cs" />
      <Compile Include="Assets\Scripts\Stage1\Barrel.cs" />
      <Compile Include="Assets\Scripts\Stage1\FloorSoldier.cs" />
      <Compile Include="Assets\Scripts\Stage1\ManagerFloorVision.cs" />
