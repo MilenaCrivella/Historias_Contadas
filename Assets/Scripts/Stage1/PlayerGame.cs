@@ -10,6 +10,11 @@ public class PlayerGame : MonoBehaviour {
     bool Air = false;
     bool Run = false;
 
+    void Start()
+    {
+        GameObject.FindGameObjectWithTag("FadeIn").GetComponent<Animator>().enabled = false;
+    }
+
     void OnCollisionEnter2D(Collision2D coll) 
 	{
         if (coll.gameObject.tag == "Floor") 
@@ -17,6 +22,10 @@ public class PlayerGame : MonoBehaviour {
             Jump = false;
             Idle = true;
             Air = false;
+        }
+        if (coll.gameObject.tag == "House")
+        {
+            GameObject.FindGameObjectWithTag("FadeIn").GetComponent<Animator>().enabled = true;
         }
     }
 
@@ -30,7 +39,7 @@ public class PlayerGame : MonoBehaviour {
 
     void CameraGame() 
 	{
-        GameCamera.transform.position = new Vector3(this.transform.position.x + 4, this.transform.position.y + 1, GameCamera.transform.position.z);
+        GameCamera.transform.position = new Vector3(this.transform.position.x + 3, this.transform.position.y + 1, GameCamera.transform.position.z);
     }
 
     void Animations() 
