@@ -16,7 +16,9 @@ public class Barrel : MonoBehaviour {
 					barrel = true;
 				}
 				else
+				{
 					barrel = false;
+				}
 			}
 		}
 		else

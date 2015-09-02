@@ -36,12 +36,6 @@ public class BuildingSoldierVision : MonoBehaviour {
             BuildingVisionManager.transform.Rotate(0, 0, -1);
         }
     }
-
-	void Start () 
-    {
-	
-	}
-	
 	void Update () 
     {
         VisionRotation();

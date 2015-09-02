@@ -6,6 +6,9 @@ public class Player2 : MonoBehaviour
 
     public GameObject GameCamera;
     public GameObject WayPoint1;
+	public GameObject WayPoint0;
+	public GameObject[] bag;
+	private int ordem;
     bool Walk = false;
     bool Idle = true;
     bool Jump = false;
@@ -13,11 +16,15 @@ public class Player2 : MonoBehaviour
     bool Run = false;
     float speed;
     bool subir = false;
+	bool descer = false;
 
     void Start()
     {
+		ordem = 0;
+		bag = new GameObject[3];
+		WayPoint0 = GameObject.FindGameObjectWithTag("WayP0");
         WayPoint1 = GameObject.FindGameObjectWithTag("WayP1");
-        GameObject.FindGameObjectWithTag("FadeIn").GetComponent<Animator>().enabled = false;
+        //GameObject.FindGameObjectWithTag("FadeIn").GetComponent<Animator>().enabled = false;
         speed = 3;
     }
     void OnCollisionEnter2D(Collision2D coll)
@@ -45,13 +52,22 @@ public class Player2 : MonoBehaviour
     {
         if (coll.gameObject.tag.Equals("WayP0"))
         {
+			descer = false;
             if (Input.GetKey(KeyCode.UpArrow)) { subir = true; }
         }
         if (coll.gameObject.tag.Equals("WayP1"))
         {
             subir = false;
+			if (Input.GetKey(KeyCode.DownArrow)) { descer = true; }
         }
+		if (coll.gameObject.tag.Equals("barrel1")) {
+			//bag[ordem] = coll.gameObject;
+			Debug.Log ("ueueueueu");	
+		}	
     }
+	void OnTriggerEnter2D(Collider2D coll){
+
+	}
 
     void CameraGame()
     {
@@ -147,8 +163,6 @@ public class Player2 : MonoBehaviour
         }
     }
 
-
-
     void Update()
     {
         if (subir)
@@ -162,8 +176,16 @@ public class Player2 : MonoBehaviour
             GameObject.FindGameObjectWithTag("2thFloor").collider2D.enabled = true;
             rigidbody2D.gravityScale = 1;
         }
+		if (descer) 
+		{
+			rigidbody2D.gravityScale = 0;
+			GameObject.FindGameObjectWithTag("2thFloor").collider2D.enabled = false;
+			transform.position = Vector3.MoveTowards(transform.position, WayPoint0.transform.position, Time.deltaTime * speed);
+		}
+
         Animations();
         Movimentation();
         CameraGame();
+
     }
 }

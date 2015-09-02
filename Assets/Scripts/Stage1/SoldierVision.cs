@@ -18,7 +18,7 @@ public class SoldierVision : MonoBehaviour {
     {
         if (Visualizou)
         {
-            Application.LoadLevel("GameOver");
+            //Application.LoadLevel("GameOver");
         }
     }
 }
