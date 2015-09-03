@@ -15,12 +15,29 @@ public class Jogador : MonoBehaviour {
 	private bool descendo = false;
 	private GameObject Destino;
 	private float speed = 3;
+	private GameObject[] bag;
+	private int orderBag = 0;
 
 	// Use this for initialization
 	void Start () {
 		cena = Application.loadedLevelName;
+		switch (cena) {
+		
+			case "Stage1":
+				break;
+			case "Stage2":
+				
+			bag = new GameObject[3];
+				break;
+			case "Stage3":
+				break;
+		
+		}
+
+
+
 		//muda isso dps
-		GameObject.FindGameObjectWithTag("FadeIn").GetComponent<Animator>().enabled = false;
+		//GameObject.FindGameObjectWithTag("FadeIn").GetComponent<Animator>().enabled = false;
 	}
 
 	void Animations() 
@@ -182,7 +199,7 @@ public class Jogador : MonoBehaviour {
 				{
 					GameObject.FindGameObjectWithTag("FadeIn").GetComponent<Animator>().enabled = true;
 				}
-			
+
 			break;
 			case "Stage3":
 				
@@ -250,7 +267,18 @@ public class Jogador : MonoBehaviour {
 						if (coll.gameObject == Destino)descendo = false;
 					}
 				}
-			
+
+				if(coll.gameObject.name == "Barril")
+				{
+
+				if(Input.GetKey(KeyCode.J)){
+						//bag[orderBag]. = coll.gameObject;
+						Destroy(coll.gameObject);
+						orderBag++;
+						
+					}
+				}
+
 			break;
 		}
 
@@ -278,8 +306,9 @@ public class Jogador : MonoBehaviour {
 			break;
 			case "Stage2":
 				CameraGame ();	
-				if(!subindo)Movimentation();
+				if(!subindo || !descendo)Movimentation();
 				UpStairs();
+				Debug.Log (bag[0]);
 			break;
 			case "Stage3":
 				Run = true;	
