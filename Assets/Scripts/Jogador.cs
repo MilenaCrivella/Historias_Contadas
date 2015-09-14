@@ -4,7 +4,7 @@ using System.Collections;
 public class Jogador : MonoBehaviour {
 
 	public GameObject GameCamera;
-	bool Walk = false;
+	public static bool Walk = false;
 	bool Idle = true;
 	bool Jump = false;
 	bool Air = false;
@@ -163,7 +163,7 @@ public class Jogador : MonoBehaviour {
 	}
 
 	void CameraGame(){
-		GameCamera.transform.position = new Vector3(this.transform.position.x + 3, this.transform.position.y + 1, GameCamera.transform.position.z);
+		GameCamera.transform.position = new Vector3(this.transform.position.x + 0.2f, this.transform.position.y + 3f , GameCamera.transform.position.z);
 	}
 	void CameraGame2(){
 		GameCamera.transform.position = new Vector3(this.transform.position.x + 3, GameCamera.transform.position.y, GameCamera.transform.position.z);
