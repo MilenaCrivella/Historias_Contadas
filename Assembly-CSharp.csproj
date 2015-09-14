@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Users/Matheus/Desktop/DeskTop/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Users/Matheus/Desktop/DeskTop/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Stage1\FadeInStage1.cs" />
      <Compile Include="Assets\Scripts\Stage1\FloorSoldier.cs" />
      <Compile Include="Assets\Scripts\Stage1\ManagerFloorVision.cs" />
+     <Compile Include="Assets\Scripts\Stage1\PlayerGame.cs" />
      <Compile Include="Assets\Scripts\Stage1\SoldierVision.cs" />
      <Compile Include="Assets\Scripts\Stage1\Wall.cs" />
      <Compile Include="Assets\Scripts\Stage2\Dog2.cs" />
@@ -64,7 +65,7 @@
      <Compile Include="Assets\Scripts\Stage3\FadeInStage3.cs" />
      <Compile Include="Assets\Scripts\Stage3\FloorThings3.cs" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Matheus/Desktop/DeskTop/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
