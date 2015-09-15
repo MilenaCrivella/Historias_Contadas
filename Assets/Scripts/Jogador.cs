@@ -163,7 +163,8 @@ public class Jogador : MonoBehaviour {
 	}
 
 	void CameraGame(){
-		GameCamera.transform.position = new Vector3(this.transform.position.x + 0.2f, this.transform.position.y + 3f , GameCamera.transform.position.z);
+		GameCamera.transform.position = new Vector3(this.transform.position.x, 0f , GameCamera.transform.position.z);
+
 	}
 	void CameraGame2(){
 		GameCamera.transform.position = new Vector3(this.transform.position.x + 3, GameCamera.transform.position.y, GameCamera.transform.position.z);
