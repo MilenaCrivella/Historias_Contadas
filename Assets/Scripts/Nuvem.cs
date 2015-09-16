@@ -10,6 +10,6 @@ public class Nuvem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.position -= new Vector3 (0.009f,0f,0f);
+		this.transform.position -= new Vector3 (-0.0009f,0f,0f);
 	}
 }

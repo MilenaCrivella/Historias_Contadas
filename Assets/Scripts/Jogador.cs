@@ -4,6 +4,8 @@ using System.Collections;
 public class Jogador : MonoBehaviour {
 
 	public GameObject GameCamera;
+	public static bool Okparalax;
+	public static bool Okteclas;
 	public static bool Walk = false;
 	bool Idle = true;
 	bool Jump = false;
@@ -18,8 +20,11 @@ public class Jogador : MonoBehaviour {
 	private GameObject[] bag;
 	private int orderBag = 0;
 
+
 	// Use this for initialization
 	void Start () {
+		Okparalax = false;
+		Okteclas = true;
 		cena = Application.loadedLevelName;
 		switch (cena) {
 		
@@ -37,7 +42,7 @@ public class Jogador : MonoBehaviour {
 
 
 		//muda isso dps
-		//GameObject.FindGameObjectWithTag("FadeIn").GetComponent<Animator>().enabled = false;
+		GameObject.FindGameObjectWithTag("FadeIn").GetComponent<Animator>().enabled = false;
 	}
 
 	void Animations() 
@@ -110,6 +115,7 @@ public class Jogador : MonoBehaviour {
 
 	void Movimentation()
 	{
+
 		if (Input.GetKey("right"))
 		{
 			transform.position += new Vector3(0.05f,0,0);
@@ -124,13 +130,14 @@ public class Jogador : MonoBehaviour {
 			Idle = true;
 			Run = false;
 		}
-		if (Input.GetKey("left"))
-		{
-			transform.position += new Vector3(-0.05f, 0, 0);
-			transform.localScale = new Vector3(-3, transform.localScale.y, transform.localScale.z);
-			Walk = true;
-			Idle = false;
-			Run = false;
+		if (Okteclas) {
+			if (Input.GetKey ("left")) {
+				transform.position += new Vector3 (-0.05f, 0, 0);
+				transform.localScale = new Vector3 (-3, transform.localScale.y, transform.localScale.z);
+				Walk = true;
+				Idle = false;
+				Run = false;
+			}
 		}
 		if (Input.GetKeyUp("left"))
 		{
@@ -138,15 +145,16 @@ public class Jogador : MonoBehaviour {
 			Idle = true;
 			Run = false;
 		}
+		
 		if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("right"))
 		{
-			transform.position += new Vector3(0.09f, 0, 0);
+			transform.position += new Vector3(0.05f, 0, 0);
 			transform.localScale = new Vector3(3, transform.localScale.y, transform.localScale.z);
 			Run = true;
 		}
 		if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("left"))
 		{
-			transform.position += new Vector3(-0.09f, 0, 0);
+			transform.position += new Vector3(-0.05f, 0, 0);
 			transform.localScale = new Vector3(-3, transform.localScale.y, transform.localScale.z);
 			Run = true;
 		}
@@ -163,8 +171,9 @@ public class Jogador : MonoBehaviour {
 	}
 
 	void CameraGame(){
-		GameCamera.transform.position = new Vector3(this.transform.position.x, 0f , GameCamera.transform.position.z);
-
+		if(this.transform.position.x > 0)
+		GameCamera.transform.position = new Vector3(this.transform.position.x + 0.2f, GameCamera.transform.position.y , GameCamera.transform.position.z);
+	
 	}
 	void CameraGame2(){
 		GameCamera.transform.position = new Vector3(this.transform.position.x + 3, GameCamera.transform.position.y, GameCamera.transform.position.z);
@@ -249,7 +258,11 @@ public class Jogador : MonoBehaviour {
 
 		switch (cena) {
 		case "Stage1":
-			
+			if(coll.gameObject.name == "WallRight"){
+
+			}
+
+
 			
 			break;
 		case "Stage2":
@@ -304,6 +317,10 @@ public class Jogador : MonoBehaviour {
 			case "Stage1":
 				Movimentation();
 				CameraGame ();
+			Okparalax = true;
+			Okteclas = true;
+			if(this.transform.position.x < 0) Okparalax = false;
+			if(this.transform.position.x < -5) Okteclas = false;
 			break;
 			case "Stage2":
 				CameraGame ();	
