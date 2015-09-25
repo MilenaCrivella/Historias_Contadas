@@ -10,6 +10,11 @@ public class GameOver : MonoBehaviour {
             Application.LoadLevel("Stage1");
             SoldierVision.Visualizou = false;
         }
+        if (Input.GetKeyDown("m"))
+        {
+            Application.LoadLevel("Menu");
+            SoldierVision.Visualizou = false;
+        }
 	}
 	
 	void Update () 

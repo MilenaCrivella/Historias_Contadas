@@ -14,12 +14,12 @@ public class FloorSoldier : MonoBehaviour {
 
     void Movimentation()
     {
-        if (transform.position.x <= FirstPosition - 5)
+        if (transform.position.x <= FirstPosition - 7)
         {
             GoRight = true;
             Goleft = false;
         }
-        if(transform.position.x >= FirstPosition + 5)
+        if(transform.position.x >= FirstPosition + 7)
         {
             GoRight = false;
             Goleft = true;

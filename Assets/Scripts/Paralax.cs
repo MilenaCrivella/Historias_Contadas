@@ -10,9 +10,10 @@ public class Paralax : MonoBehaviour {
 	private GameObject Mountain;
 	private GameObject Nuvens;
 	private bool PlayerWalking;
+    private bool PlayerRun;
 	private float VelocityOne;
 	private float VelocityTwo;
-	private float VelocityThird;
+	private float VelocityRun;
 	private float VelocityFourth;
 	private float velocityFifth;
 	private float velocityStop;
@@ -23,7 +24,7 @@ public class Paralax : MonoBehaviour {
 
 		VelocityOne = -0.045f;
 		VelocityTwo = -0.035f;
-		VelocityThird = -0.025f;
+		VelocityRun = -0.049f;
 		VelocityFourth = -0.03f;
 		velocityFifth = -0.0489f;
 		velocityStop = 0f;
@@ -40,22 +41,25 @@ public class Paralax : MonoBehaviour {
 	void Grass(){
 
 		PlayerWalking = Jogador.Walk;
+        PlayerRun = Jogador.Run;
 
 		if (PlayerWalking && Input.GetKey("right")) {
 			Nuvens.transform.position -= new Vector3(velocityFifth,0f,0f);
 			Mountain.transform.position -= new Vector3(velocityFifth,0f,0f);
 			MountainTwo.transform.position -= new Vector3(VelocityOne,0f,0f);
-			//GrassGray.transform.position -= new Vector3(VelocityTwo,0f,0f);
-			//ThirdPlane.transform.position -= new Vector3(VelocityThird,0,0);
-			//FloorPlane.transform.position -= new Vector3(VelocityFourth,0,0);
 		}
 		if (PlayerWalking && Input.GetKey("left")) {
 			MountainTwo.transform.position += new Vector3(VelocityOne,0f,0f);
-			//GrassGray.transform.position += new Vector3(VelocityTwo,0f,0f);
-			// ThirdPlane.transform.position += new Vector3(VelocityThird,0,0);
-			//FloorPlane.transform.position += new Vector3(VelocityFourth,0,0);
 			Mountain.transform.position += new Vector3(velocityFifth,0f,0f);
 		}
+        if (PlayerRun && Input.GetKey("right")) {
+            Mountain.transform.position -= new Vector3(VelocityRun, 0f, 0f);
+            MountainTwo.transform.position -= new Vector3(VelocityRun, 0f, 0f);
+        }
+        if (PlayerRun && Input.GetKey("left")) {
+            Mountain.transform.position += new Vector3(VelocityRun, 0f, 0f);
+            MountainTwo.transform.position += new Vector3(VelocityRun, 0f, 0f);
+        }
 
 	}
 	// Update is called once per frame

@@ -51,6 +51,7 @@ public class MiniGameSystem : MonoBehaviour {
         if (texts[0].text.Equals(s) && texts[1].text.Equals(a) && texts[2].text.Equals(b) &&
            texts[3].text.Equals(i) && texts[4].text.Equals(n) && texts[5].text.Equals(e))
         {
+            Application.LoadLevel("YouWin");
             print("voce ganhou");
         }
     }

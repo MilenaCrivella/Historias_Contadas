@@ -10,7 +10,7 @@ public class Jogador : MonoBehaviour {
 	bool Idle = true;
 	bool Jump = false;
 	bool Air = false;
-	bool Run = false;
+	public static bool Run = false;
 	bool Slide = false;
 	private string cena;
 	private bool subindo = false;
@@ -94,10 +94,12 @@ public class Jogador : MonoBehaviour {
 
 		if (Input.GetKey("down"))
 		{
+            transform.localScale = new Vector3(3,3,transform.localScale.z);
 			Slide = true;
 		}
 		if (Input.GetKeyUp("down"))
 		{
+            transform.localScale = new Vector3(0.2f, 0.2f   , transform.localScale.z);
 			Slide = false;
 		}
 		if (!Air)
@@ -119,7 +121,7 @@ public class Jogador : MonoBehaviour {
 		if (Input.GetKey("right"))
 		{
 			transform.position += new Vector3(0.05f,0,0);
-			transform.localScale = new Vector3(3, transform.localScale.y, transform.localScale.z);
+			transform.localScale = new Vector3(3, 3, transform.localScale.z);
 			Walk = true;
 			Idle = false;
 			Run = false;
@@ -133,7 +135,7 @@ public class Jogador : MonoBehaviour {
 		if (Okteclas) {
 			if (Input.GetKey ("left")) {
 				transform.position += new Vector3 (-0.05f, 0, 0);
-				transform.localScale = new Vector3 (-3, transform.localScale.y, transform.localScale.z);
+				transform.localScale = new Vector3 (-3, 3, transform.localScale.z);
 				Walk = true;
 				Idle = false;
 				Run = false;
@@ -149,15 +151,25 @@ public class Jogador : MonoBehaviour {
 		if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("right"))
 		{
 			transform.position += new Vector3(0.05f, 0, 0);
-			transform.localScale = new Vector3(3, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(0.5f, 0.5f, transform.localScale.z);
 			Run = true;
 		}
+        if (Input.GetKeyUp(KeyCode.LeftShift) && Input.GetKeyUp("right"))
+        {
+            transform.localScale = new Vector3(3, 3, transform.localScale.z);
+            Run = false;
+        }
 		if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("left"))
 		{
 			transform.position += new Vector3(-0.05f, 0, 0);
-			transform.localScale = new Vector3(-3, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(-0.5f, 0.5f, transform.localScale.z);
 			Run = true;
 		}
+        if (Input.GetKeyUp(KeyCode.LeftShift) && Input.GetKeyUp("left"))
+        {
+            transform.localScale = new Vector3(-3, 3, transform.localScale.z);
+            Run = false;
+        }
 		if (!Air)
 		{
 			if (Input.GetKeyDown(KeyCode.Space))
@@ -171,13 +183,15 @@ public class Jogador : MonoBehaviour {
 	}
 
 	void CameraGame(){
-		if(this.transform.position.x > 0)
-		GameCamera.transform.position = new Vector3(this.transform.position.x + 0.2f, GameCamera.transform.position.y , GameCamera.transform.position.z);
+		if(this.transform.position.x > 0 && this.transform.position.x < 163)
+		GameCamera.transform.position = new Vector3(this.transform.position.x + 4f, GameCamera.transform.position.y , GameCamera.transform.position.z);
 	
 	}
-	void CameraGame2(){
-		GameCamera.transform.position = new Vector3(this.transform.position.x + 3, GameCamera.transform.position.y, GameCamera.transform.position.z);
-	}
+    void CameraGame2()
+    {
+        Debug.Log("my");
+        GameCamera.transform.position = new Vector3(this.transform.position.x + 3, transform.position.y + 2, GameCamera.transform.position.z);
+    }
 
 	void OnCollisionEnter2D(Collision2D coll) 
 	{
@@ -286,7 +300,7 @@ public class Jogador : MonoBehaviour {
 				{
 
 				if(Input.GetKey(KeyCode.J)){
-						//bag[orderBag]. = coll.gameObject;
+						bag[orderBag] = coll.gameObject;
 						Destroy(coll.gameObject);
 						orderBag++;
 						
@@ -320,18 +334,19 @@ public class Jogador : MonoBehaviour {
 			Okparalax = true;
 			Okteclas = true;
 			if(this.transform.position.x < 0) Okparalax = false;
-			if(this.transform.position.x < -5) Okteclas = false;
+            if (this.transform.position.x < -5) Okteclas = false;
 			break;
 			case "Stage2":
-				CameraGame ();	
+				CameraGame2 ();	
 				if(!subindo || !descendo)Movimentation();
 				UpStairs();
-				Debug.Log (bag[0]);
+                Debug.Log(orderBag);
+                if (orderBag >= 3) Application.LoadLevel("Stage3");
 			break;
 			case "Stage3":
 				Run = true;	
 				RunForest();
-				CameraGame2 ();
+				CameraGame ();
 			break;
 			}
 		 
