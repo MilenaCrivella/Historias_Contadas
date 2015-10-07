@@ -1,10 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Paralax.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Stage1\Paralax.cs">
     <Files>
-      <File FileName="Assets\Scripts\Paralax.cs" Line="42" Column="32" />
       <File FileName="Assets\Scripts\Jogador.cs" Line="174" Column="6" />
-      <File FileName="Assets\Scripts\Nuvem.cs" Line="13" Column="51" />
+      <File FileName="Assets\Scripts\Stage1\Paralax.cs" Line="19" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
