@@ -6,12 +6,12 @@ public class Jogador : MonoBehaviour {
 	public GameObject GameCamera;
 	public static bool Okparalax;
 	public static bool Okteclas;
-	public static bool Walk = false;
-	bool Idle = true;
-	bool Jump = false;
-	bool Air = false;
-	public static bool Run = false;
-	bool Slide = false;
+	public static bool Walk;
+	bool Idle;
+	bool Jump;
+	bool Air;
+	public static bool Run;
+	bool Slide;
 	private string cena;
 	private bool subindo = false;
 	private bool descendo = false;
@@ -23,6 +23,12 @@ public class Jogador : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Idle = true;
+		Jump = false;
+		Walk = false;
+		Air = false;
+		Run = false;
+		Slide = false;
 		Okparalax = false;
 		Okteclas = true;
 		cena = Application.loadedLevelName;
