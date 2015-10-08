@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 2acc1e9ac5072eb42b289468af4f37d1
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spritesheet_andando_0
+    21300002: spritesheet_andando_1
+    21300004: spritesheet_andando_2
+    21300006: spritesheet_andando_3
+    21300008: spritesheet_andando_4
+    21300010: spritesheet_andando_5
+    21300012: spritesheet_andando_6
+    21300014: spritesheet_andando_7
+    21300016: spritesheet_andando_8
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 2
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: spritesheet_andando_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 12
+        width: 168
+        height: 511
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet_andando_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 29
+        width: 182
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet_andando_2
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 11
+        width: 150
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet_andando_3
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 0
+        width: 187
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet_andando_4
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 5
+        width: 191
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet_andando_5
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 14
+        width: 182
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet_andando_6
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 8
+        width: 142
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet_andando_7
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 7
+        width: 152
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spritesheet_andando_8
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 12
+        width: 195
+        height: 504
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -7,6 +7,7 @@ public class Jogador : MonoBehaviour {
 	public static bool Okparalax;
 	public static bool Okteclas;
 	public static bool Walk;
+    public static bool Escondido;
 	bool Idle;
 	bool Jump;
 	bool Air;
@@ -189,7 +190,7 @@ public class Jogador : MonoBehaviour {
 	}
 
 	void CameraGame(){
-		if(this.transform.position.x > 0 && this.transform.position.x < 163)
+		if(this.transform.position.x > 0 || this.transform.position.x < 166)
 		GameCamera.transform.position = new Vector3(this.transform.position.x + 4f, GameCamera.transform.position.y , GameCamera.transform.position.z);
 	
 	}
@@ -278,8 +279,12 @@ public class Jogador : MonoBehaviour {
 
 		switch (cena) {
 		case "Stage1":
-			if(coll.gameObject.name == "WallRight"){
-
+                if (coll.gameObject.name == "Muro" || coll.gameObject.name == "Bush")
+                {
+                
+                if (Input.GetKeyDown(KeyCode.DownArrow)) Escondido = true;     
+                if (Input.GetKeyUp(KeyCode.DownArrow)) Escondido = false;
+                
 			}
 
 
@@ -335,11 +340,11 @@ public class Jogador : MonoBehaviour {
 		Animations ();
 		switch (cena) {
 			case "Stage1":
-				Movimentation();
+                Movimentation();
 				CameraGame ();
 			Okparalax = true;
 			Okteclas = true;
-			if(this.transform.position.x < 0) Okparalax = false;
+            if (this.transform.position.x < 0 || this.transform.position.x >= 165) Okparalax = false;
             if (this.transform.position.x < -5) Okteclas = false;
 			break;
 			case "Stage2":
