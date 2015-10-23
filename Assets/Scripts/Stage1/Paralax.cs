@@ -22,12 +22,12 @@ public class Paralax : MonoBehaviour {
 	
 	void Start () 
 	{
-		MountainTwoSpeed = 0.048f;
+		MountainTwoSpeed = 0.0389f;
 		VelocityTwo = 0.035f;
-		VelocityRun = 0.049f;
-		VelocityFourth = 0.03f;
+		VelocityRun = 0.089f;
+		VelocityFourth = 0.09f;
 		velocityFifth = 0.0489f;
-        velocitySinc = 0.05f;
+        velocitySinc = 0.04f;
 
 
 		Nuvens = GameObject.Find ("Nuvens");
@@ -58,13 +58,13 @@ public class Paralax : MonoBehaviour {
 		if (StatsP.Equals("running") && Input.GetKey("right")) 
 		{
             MountainTwo.transform.position += new Vector3(VelocityRun, 0f, 0f);
-            MountainOne.transform.position += new Vector3(velocitySinc, 0f, 0f);
+            MountainOne.transform.position += new Vector3(VelocityFourth, 0f, 0f);
         }
 
 		if (StatsP.Equals("running") && Input.GetKey("left")) 
 		{
             MountainTwo.transform.position -= new Vector3(VelocityRun, 0f, 0f);
-            MountainOne.transform.position -= new Vector3(velocitySinc, 0f, 0f);
+            MountainOne.transform.position -= new Vector3(VelocityFourth, 0f, 0f);
         }
 	}
 
