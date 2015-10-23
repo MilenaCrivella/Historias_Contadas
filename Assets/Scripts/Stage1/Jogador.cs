@@ -15,6 +15,7 @@ public class Jogador : MonoBehaviour {
 
 	void Start ()
 	{
+		playerStats = "idle";
 		Okparalax = false;
 		Okteclas = true;
 
@@ -25,6 +26,7 @@ public class Jogador : MonoBehaviour {
 
 	void Animations() 
 	{
+
 		if (playerStats.Equals("idle")) 
 		{ gameObject.GetComponent<Animator>().SetInteger("AnimationState", 0); }
 
@@ -38,34 +40,14 @@ public class Jogador : MonoBehaviour {
 	
 	void Movimentation()
 	{
+
 		if (Input.GetKey("right"))
 		{
 			transform.position += new Vector3(0.05f,0,0);
-			//transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
 			transform.localScale = new Vector3(0.4f, this.transform.localScale.y, 1);
 			playerStats = "walk";
 		}
 
-		if (Input.GetKeyUp("right"))
-		{
-			playerStats = "idle";
-		}
-
-		if (Okteclas) 
-		{
-			if (Input.GetKey ("left")) 
-			{
-				transform.position += new Vector3 (-0.05f, 0, 0);
-				transform.localScale = new Vector3(-0.4f, this.transform.localScale.y, 1);
-				playerStats = "walk";
-			}
-		}
-
-		if (Input.GetKeyUp("left"))
-		{
-			playerStats = "idle";
-		}
-		
 		if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("right"))
 		{
 			transform.position += new Vector3(0.05f, 0, 0);
@@ -73,25 +55,23 @@ public class Jogador : MonoBehaviour {
 			playerStats = "running";
 		}
 
-        if (Input.GetKeyUp(KeyCode.LeftShift) && Input.GetKeyUp("right"))
-        {
-			transform.localScale = new Vector3(0.4f, this.transform.localScale.y, transform.localScale.z);
-			playerStats = "idle";
-        }
-
-		if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("left"))
+		if (Okteclas) 
 		{
-			transform.position += new Vector3(-0.05f, 0, 0);
-			transform.localScale = new Vector3(-0.4f, this.transform.localScale.y, transform.localScale.z);
-			playerStats = "running";
+			if (Input.GetKey("left")) 
+			{
+                transform.localScale = new Vector3(-0.4f, this.transform.localScale.y, 1);
+                transform.position += new Vector3 (-0.05f, 0, 0);
+				
+				playerStats = "walk";
+			}
+			
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("left"))
+			{
+				transform.position += new Vector3(-0.05f, 0, 0);
+				transform.localScale = new Vector3(-0.4f, this.transform.localScale.y, transform.localScale.z);
+				playerStats = "running";
+			}
 		}
-
-        if (Input.GetKeyUp(KeyCode.LeftShift) && Input.GetKeyUp("left"))
-        {
-			transform.localScale = new Vector3(-0.4f, this.transform.localScale.y, transform.localScale.z);
-			playerStats = "idle";
-        }
-
 	}
 
 	void CameraGame()
@@ -111,19 +91,8 @@ public class Jogador : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) 
 	{
-		switch (scene) 
-		{
-			case "Stage1":
-			
-			if (coll.gameObject.tag == "Floor") 
-			{ playerStats = "idle"; }
-			
-			if (coll.gameObject.tag == "House")
-			{ GameObject.FindGameObjectWithTag("FadeIn").GetComponent<Animator>().enabled = true; }
-			
-			break;
-		}
-
+		if (coll.gameObject.tag == "House")
+		{ GameObject.FindGameObjectWithTag("FadeIn").GetComponent<Animator>().enabled = true; }
 	}
 
 	void OnTriggerStay2D(Collider2D coll)
@@ -135,7 +104,7 @@ public class Jogador : MonoBehaviour {
                 
 				if (coll.gameObject.name == "Muro" || coll.gameObject.name == "Bush")
                 {
-					if (Input.GetKeyDown(KeyCode.DownArrow))
+					if (Input.GetKey(KeyCode.DownArrow))
 					{ Escondido = true;}     
 
 					if (Input.GetKeyUp(KeyCode.DownArrow))
@@ -149,6 +118,11 @@ public class Jogador : MonoBehaviour {
 	
 	void FixedUpdate () 
 	{
+		if (!Input.anyKey) 
+		{
+			playerStats = "idle";
+		}
+
 		Animations ();
 
 		switch (scene) 
@@ -164,7 +138,10 @@ public class Jogador : MonoBehaviour {
 				{Okparalax = false;}
 
 				if (this.transform.position.x < -5)
-				{Okteclas = false;}
+				{
+				Okteclas = false;
+				playerStats = "idle";
+				}
 
 			break;
 		}
