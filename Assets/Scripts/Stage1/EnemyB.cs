@@ -4,14 +4,13 @@ using System.Collections;
 public class EnemyB : MonoBehaviour {
 
 	private bool lookside;
-	private GameObject target; 
-	float runner = 1f;
+
+
 
 
 	// Use this for initialization
 	void Start () {
 		lookside = true;
-		target = GameObject.Find("BuildingSoldier1");
 
 
 	}
@@ -20,25 +19,21 @@ public class EnemyB : MonoBehaviour {
 	{
 		if(coll.gameObject.tag == "Player")
 		{
-			print("game over");
+			Application.LoadLevel("GameOver");
 		}
 	}
 
 	void VisionSide(){
-		float step = runner * Time.deltaTime;
-		Vector3 TargetDirect = target.transform.position - this.transform.position;
-		Vector3 newDir = Vector3.RotateTowards(transform.forward, TargetDirect, step, 0.0F);
-		transform.rotation = Quaternion.LookRotation(newDir);
-
-		/*
-		if (lookside) 
-		{
-			this.transform.Rotate(0, 0, 1);
-		} 
-		else {
-			this.transform.Rotate(0, 0, -1);
+		if (transform.localRotation.z > 0.7)
+			lookside = false;
+		if (transform.localRotation.z < -0.7)
+			lookside = true;
+		if (lookside) {
+			transform.RotateAround (GameObject.Find ("EnemyB").transform.position, Vector3.back, -20 * Time.deltaTime);
+		} else {
+			transform.RotateAround (GameObject.Find ("EnemyB").transform.position, Vector3.back, 20 * Time.deltaTime);
 		}
-		*/
+
 	}
 	// Update is called once per frame
 	void Update () {

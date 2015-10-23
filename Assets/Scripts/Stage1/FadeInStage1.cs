@@ -6,7 +6,7 @@ public class FadeInStage1 : MonoBehaviour {
     public void ChangeScene()
     {
 		
-			Application.LoadLevel ("Stage2");
+			Application.LoadLevel ("YouWin");
             print("zas");
 		
     }
