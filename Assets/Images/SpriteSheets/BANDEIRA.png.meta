@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: 1fca6a6aa2963ed4285d9a54f7ce1d54
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BANDEIRA_0
+    21300002: BANDEIRA_1
+    21300004: BANDEIRA_2
+    21300006: BANDEIRA_3
+    21300008: BANDEIRA_4
+    21300010: BANDEIRA_5
+    21300012: BANDEIRA_6
+    21300014: BANDEIRA_7
+    21300016: BANDEIRA_8
+    21300018: BANDEIRA_9
+    21300020: BANDEIRA_10
+    21300022: BANDEIRA_11
+    21300024: BANDEIRA_12
+    21300026: BANDEIRA_13
+    21300028: BANDEIRA_14
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 2
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: BANDEIRA_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 284
+        width: 194
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_1
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 284
+        width: 193
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_2
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 286
+        width: 192
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_3
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 286
+        width: 191
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_4
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 286
+        width: 190
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_5
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 286
+        width: 189
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_6
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 286
+        width: 188
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_7
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 135
+        width: 187
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_8
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 135
+        width: 185
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_9
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 135
+        width: 182
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_10
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 135
+        width: 184
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_11
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 135
+        width: 186
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_12
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 135
+        width: 189
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_13
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 135
+        width: 191
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BANDEIRA_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 193
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
