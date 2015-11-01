@@ -1,0 +1,12 @@
+C:\Users\Vinicius\Documents\GitHub\Projeto-Historias-Contadas\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\Vinicius\Documents\GitHub\Projeto-Historias-Contadas\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\Vinicius\Documents\GitHub\Projeto-Historias-Contadas\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Vinicius\Documents\GitHub\Projeto-Historias-Contadas\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Vinicius\Documents\GitHub\Projeto-Historias-Contadas\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\Vinicius\Documents\GitHub\Projeto-Historias-Contadas\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Vinicius\Documents\GitHub\Projeto-Historias-Contadas\Temp\bin\Debug\nunit.framework.dll
+C:\Users\Vinicius\Documents\GitHub\Projeto-Historias-Contadas\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Vinicius\Documents\GitHub\Projeto-Historias-Contadas\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Vinicius\Documents\GitHub\Projeto-Historias-Contadas\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+C:\Users\Vinicius\Documents\GitHub\Projeto-Historias-Contadas\obj\Debug\Assembly-CSharp.dll
+C:\Users\Vinicius\Documents\GitHub\Projeto-Historias-Contadas\obj\Debug\Assembly-CSharp.pdb

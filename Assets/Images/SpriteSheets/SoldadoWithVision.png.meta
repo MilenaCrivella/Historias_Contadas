@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: 6f3c2692db3b54d4aa423a3bdb94b779
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SoldadoWithVision_0
+    21300002: SoldadoWithVision_1
+    21300004: SoldadoWithVision_2
+    21300006: SoldadoWithVision_3
+    21300008: SoldadoWithVision_4
+    21300010: SoldadoWithVision_5
+    21300012: SoldadoWithVision_6
+    21300014: SoldadoWithVision_7
+    21300016: SoldadoWithVision_8
+    21300018: SoldadoWithVision_9
+    21300020: SoldadoWithVision_10
+    21300022: SoldadoWithVision_11
+    21300024: SoldadoWithVision_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: SoldadoWithVision_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 793
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SoldadoWithVision_1
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 5
+        width: 799
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SoldadoWithVision_2
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 5
+        width: 809
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SoldadoWithVision_3
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 7
+        width: 797
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SoldadoWithVision_4
+      rect:
+        serializedVersion: 2
+        x: 3391
+        y: 0
+        width: 802
+        height: 569
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SoldadoWithVision_5
+      rect:
+        serializedVersion: 2
+        x: 4249
+        y: 7
+        width: 790
+        height: 558
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SoldadoWithVision_6
+      rect:
+        serializedVersion: 2
+        x: 5096
+        y: 7
+        width: 815
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SoldadoWithVision_7
+      rect:
+        serializedVersion: 2
+        x: 5941
+        y: 14
+        width: 822
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SoldadoWithVision_8
+      rect:
+        serializedVersion: 2
+        x: 6794
+        y: 11
+        width: 802
+        height: 556
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SoldadoWithVision_9
+      rect:
+        serializedVersion: 2
+        x: 7942
+        y: 237
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SoldadoWithVision_10
+      rect:
+        serializedVersion: 2
+        x: 8466
+        y: 2
+        width: 786
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SoldadoWithVision_11
+      rect:
+        serializedVersion: 2
+        x: 7942
+        y: 219
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SoldadoWithVision_12
+      rect:
+        serializedVersion: 2
+        x: 7620
+        y: 7
+        width: 802
+        height: 562
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

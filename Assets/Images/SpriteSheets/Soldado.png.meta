@@ -1,18 +1,7 @@
 fileFormatVersion: 2
-guid: b023c884ab040a84581e38320de5ff0b
+guid: 1c9e5de55ea432142b7cc1e113429169
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Soldado_0
-    21300002: Soldado_1
-    21300004: Soldado_2
-    21300006: Soldado_3
-    21300008: Soldado_4
-    21300010: Soldado_5
-    21300012: Soldado_6
-    21300014: Soldado_7
-    21300016: Soldado_8
-    21300018: Soldado_9
-    21300020: Soldado_10
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -33,12 +22,12 @@ TextureImporter:
   generateCubemap: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 4096
+  maxTextureSize: 1024
   textureSettings:
-    filterMode: 2
+    filterMode: -1
     aniso: 16
     mipBias: -1
-    wrapMode: 1
+    wrapMode: -1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -53,116 +42,6 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: Soldado_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 204
-        height: 418
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Soldado_1
-      rect:
-        serializedVersion: 2
-        x: 303
-        y: 1
-        width: 199
-        height: 414
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Soldado_2
-      rect:
-        serializedVersion: 2
-        x: 547
-        y: 1
-        width: 216
-        height: 414
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Soldado_3
-      rect:
-        serializedVersion: 2
-        x: 810
-        y: 4
-        width: 193
-        height: 411
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Soldado_4
-      rect:
-        serializedVersion: 2
-        x: 1074
-        y: 1
-        width: 211
-        height: 414
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Soldado_5
-      rect:
-        serializedVersion: 2
-        x: 1346
-        y: 1
-        width: 211
-        height: 414
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Soldado_6
-      rect:
-        serializedVersion: 2
-        x: 1610
-        y: 4
-        width: 246
-        height: 415
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Soldado_7
-      rect:
-        serializedVersion: 2
-        x: 1879
-        y: 7
-        width: 270
-        height: 412
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Soldado_8
-      rect:
-        serializedVersion: 2
-        x: 2210
-        y: 4
-        width: 241
-        height: 412
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Soldado_9
-      rect:
-        serializedVersion: 2
-        x: 2483
-        y: 1
-        width: 225
-        height: 418
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Soldado_10
-      rect:
-        serializedVersion: 2
-        x: 2796
-        y: 1
-        width: 204
-        height: 418
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+    sprites: []
   spritePackingTag: 
   userData: 
