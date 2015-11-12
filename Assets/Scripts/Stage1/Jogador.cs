@@ -59,7 +59,8 @@ public class Jogador : MonoBehaviour {
 		{
 			if (Input.GetKey("left")) 
 			{
-                transform.localScale = new Vector3(-0.4f, this.transform.localScale.y, 1);
+				transform.localScale = new Vector3(-0.4f, this.transform.localScale.y, 1);
+				transform.localScale = new Vector3(-0.4f, this.transform.localScale.y, 1);
                 transform.position += new Vector3 (-0.04f, 0, 0);
 				
 				playerStats = "walk";
@@ -71,6 +72,10 @@ public class Jogador : MonoBehaviour {
 				transform.localScale = new Vector3(-0.4f, this.transform.localScale.y, transform.localScale.z);
 				playerStats = "running";
 			}
+			/*if(Input.GetKey("down"))
+			{
+				playerStats = "down";
+			}*/
 		}
 	}
 
