@@ -36,6 +36,8 @@ public class Jogador : MonoBehaviour {
 		if (playerStats.Equals("running"))
 		{ gameObject.GetComponent<Animator>().SetInteger("AnimationState", 2); }
 		//fazer ela abaixar
+		if (playerStats.Equals("down"))
+		{ gameObject.GetComponent<Animator>().SetInteger("AnimationState", 3); }
 	}
 	
 	void Movimentation()
@@ -50,7 +52,7 @@ public class Jogador : MonoBehaviour {
 
 		if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("right"))
 		{
-			transform.position += new Vector3(0.05f, 0, 0);
+			transform.position += new Vector3(0.04f, 0, 0);
 			transform.localScale = new Vector3(0.4f, this.transform.localScale.y, transform.localScale.z);
 			playerStats = "running";
 		}
@@ -68,14 +70,16 @@ public class Jogador : MonoBehaviour {
 			
             if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("left"))
 			{
-				transform.position += new Vector3(-0.05f, 0, 0);
+				transform.position += new Vector3(-0.04f, 0, 0);
 				transform.localScale = new Vector3(-0.4f, this.transform.localScale.y, transform.localScale.z);
 				playerStats = "running";
 			}
-			/*if(Input.GetKey("down"))
+			if(Input.GetKey("down"))
 			{
 				playerStats = "down";
-			}*/
+
+			}
+
 		}
 	}
 
