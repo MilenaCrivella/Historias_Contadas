@@ -8,6 +8,7 @@ public class Jogador : MonoBehaviour {
 	public static bool Okparalax;
 	public static bool Okteclas;
     public static bool Escondido;
+	public GameObject Tutorial;
 
 
 	public static string playerStats;
@@ -48,6 +49,7 @@ public class Jogador : MonoBehaviour {
 			transform.position += new Vector3(0.04f,0,0);
 			transform.localScale = new Vector3(0.4f, this.transform.localScale.y, 1);
 			playerStats = "walk";
+			Tutorial.SetActive(false);
 		}
 
 		if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey("right"))
@@ -55,6 +57,7 @@ public class Jogador : MonoBehaviour {
 			transform.position += new Vector3(0.04f, 0, 0);
 			transform.localScale = new Vector3(0.4f, this.transform.localScale.y, transform.localScale.z);
 			playerStats = "running";
+			Tutorial.SetActive(false);
 		}
 
 		if (Okteclas) 
@@ -64,7 +67,7 @@ public class Jogador : MonoBehaviour {
 				transform.localScale = new Vector3(-0.4f, this.transform.localScale.y, 1);
 				transform.localScale = new Vector3(-0.4f, this.transform.localScale.y, 1);
                 transform.position += new Vector3 (-0.04f, 0, 0);
-				
+				Tutorial.SetActive(false);
 				playerStats = "walk";
 			}
 			
@@ -73,11 +76,12 @@ public class Jogador : MonoBehaviour {
 				transform.position += new Vector3(-0.04f, 0, 0);
 				transform.localScale = new Vector3(-0.4f, this.transform.localScale.y, transform.localScale.z);
 				playerStats = "running";
+				Tutorial.SetActive(false);
 			}
 			if(Input.GetKey("down"))
 			{
 				playerStats = "down";
-
+				Tutorial.SetActive(false);
 			}
 
 		}

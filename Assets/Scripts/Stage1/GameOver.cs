@@ -19,4 +19,5 @@ public class GameOver : MonoBehaviour {
     {
         Restart();
 	}
+
 }

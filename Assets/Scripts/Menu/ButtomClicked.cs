@@ -6,11 +6,6 @@ using UnityEngine.UI;
 public class ButtomClicked : MonoBehaviour {
 
     int timeSlide = 0;
-    void Start()
-    {
-        
-    }
-
     public void Buttomclicked(string ButtomName)
     {
         if (ButtomName == "Play")
